@@ -1,4 +1,8 @@
+#ifndef TICTACTOE_GAME
+#define TICTACTOE_GAME
+
 #include <iostream>
+#include <vector>
 #include "player.hpp"
 
 using namespace std;
@@ -132,6 +136,19 @@ public:
         return checkPlayerWin(board)*(countEmptyBoxes(board)+1);
     }
 
+    vector<int> availableMove(int board[][3]){
+        vector<int> avail_move;
+        avail_move.resize(countEmptyBoxes(board));
+        for (int i = 0; i < 3; i++){
+            for (int j = 0; j < 3; j++){
+                if (board[i][j] != 0){
+                    avail_move.push_back(board[i][j]);
+                }
+            }
+        }
+        return avail_move;
+    }
+
     int computerPlay(int board[][3]){
         int max = 0;
         int min = 0;
@@ -165,3 +182,5 @@ public:
 
 
 };
+
+#endif
