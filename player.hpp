@@ -3,42 +3,27 @@
 
 #define pass (void)0
 #include <iostream>
-#include "TicTacToe.hpp"
+//#include "Board.hpp"
 #include <vector>
 
-using namespace std;
-
-
 class Player{
-protected:
+private:
     char letter;
-    TicTacToe newBoard = TicTacToe();
 
 public:
     Player(char letter){
         this->letter = letter;
+    }
+    Player(){
+        pass;
     }
 
     char getLetter(){
         return this->letter;
     }
 
-    void getMove(int board[][3]){
-        pass;
-    }
-};
-
-class Human_Player : public Player{
-public:
-    Human_Player(char letter) : Player(letter) {}
-
-    void getMove(){
-        int position;
-        vector<int> avail_move;
-        cout << "Human (" <<this->letter<<")'s turn, please enter position (0-9): ";
-        cin >> position;
-
-
+    void setLetter(char letter){
+        this->letter = letter;
     }
 };
 
