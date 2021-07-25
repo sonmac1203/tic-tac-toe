@@ -3,7 +3,6 @@
 
 #define pass (void)0
 #include <iostream>
-//#include "Board.hpp"
 #include <vector>
 
 class Player{

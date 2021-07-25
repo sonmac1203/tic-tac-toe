@@ -1,6 +1,6 @@
 #include <iostream>
 #include "Board.hpp"
-#include "player.hpp"
+#include "Player.hpp"
 
 int main(int argc, char** argv){
     Board new_game;

@@ -3,7 +3,7 @@
 
 #include <iostream>
 #include <vector>
-#include "player.hpp"
+#include "Player.hpp"
 
 class Board{
 
